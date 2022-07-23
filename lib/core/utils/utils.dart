@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/modules/about/about.dart';
 import 'package:portfolio/modules/contact/contact.dart';
 import 'package:portfolio/modules/home/home.dart';
+import 'package:portfolio/widgets/footer.dart';
 
 class StaticUtils {
   static const String hi = 'assets/hi.gif';
@@ -42,10 +43,10 @@ class BodyUtils {
   static const List<Widget> views = [
      HomePage(),
      About(),
-     Contact()
+     Contact(),
     // Services(),
     // Portfolio(),
      
-    // Footer(),
+     Footer()
   ];
 }

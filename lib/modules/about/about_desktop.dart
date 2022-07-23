@@ -143,11 +143,7 @@ class AboutDesktop extends StatelessWidget {
                             ),
                           ),
                           Space.x1!,
-                          Container(
-                            color: Colors.grey[900]!,
-                            width: AppDimensions.normalize(30),
-                            height: AppDimensions.normalize(0.5),
-                          ),
+                       
                           ...WorkUtils.logos.asMap().entries.map(
                                 (e) => Expanded(
                                   child: CommunityIconBtn(
