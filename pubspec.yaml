@@ -56,6 +56,7 @@ dependencies:
   animated_text_kit: ^4.2.1
   url_launcher: ^6.1.2
   universal_html: ^2.0.8
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
