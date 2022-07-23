@@ -46,7 +46,7 @@ class _MobileDrawer extends StatelessWidget {
                       child: MaterialButton(
                         hoverColor: AppTheme.c!.primary!.withAlpha(70),
                         onPressed: () {
-                          scrollBloc.add(ScrollEventMobile(index: e.key));
+                          scrollBloc.add(ScrollEventMobile(e.key));
                           Navigator.pop(context);
                         },
                         child: ListTile(

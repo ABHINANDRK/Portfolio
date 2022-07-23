@@ -12,7 +12,7 @@ class ScrollBloc extends Bloc<ScrollEvent, ScrollState> {
   ScrollController get controller => scrollController;
 
   ScrollBloc() : super(ScrollInitial()) {
-    on<ScrollEvent>(_scroll);
+    on<ScrollEventDesktop>(_scroll);
     on<ScrollEventMobile>(_scrollMobile);
   }
 

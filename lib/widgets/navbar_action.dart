@@ -35,7 +35,7 @@ class NavBarActionButton extends StatelessWidget {
           highlightColor: Colors.white54,
           hoverColor: AppTheme.c!.primary,
           onPressed: () {
-            scrollBloc.add(ScrollEventDesktop(index: index));
+            scrollBloc.add(ScrollEventDesktop(index));
           },
           child: Padding(
             padding: Space.all(0.5, 0.45),

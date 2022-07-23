@@ -9,9 +9,11 @@ abstract class ScrollEvent extends Equatable {
 }
 
 class ScrollEventMobile extends ScrollEvent{
-  const ScrollEventMobile({required super.index});
+  final int index;
+  const ScrollEventMobile(this.index) : super(index: index);
 }
 
 class ScrollEventDesktop extends ScrollEvent{
-  const ScrollEventDesktop({required super.index});
+  final int index;
+  const ScrollEventDesktop(this.index) : super(index: index);
 }
