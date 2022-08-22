@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:portfolio/configs/app_dimensions.dart';
 import 'package:portfolio/core/utils/about_utils.dart';
 import 'package:portfolio/core/utils/app_theme.dart';
 import 'package:portfolio/core/utils/app_typography.dart';
-import 'package:portfolio/core/utils/constants.dart';
 import 'package:portfolio/core/utils/space.dart';
 import 'package:portfolio/core/utils/utils.dart';
 import 'package:portfolio/core/utils/work_utils.dart';
 import 'package:portfolio/widgets/about_me_data.dart';
 import 'package:portfolio/widgets/community_button.dart';
 import 'package:portfolio/widgets/custom_text_heading.dart';
-import 'package:portfolio/widgets/tech_widget.dart';
 
 import 'package:universal_html/html.dart' as html;
 
@@ -85,12 +84,30 @@ class AboutDesktop extends StatelessWidget {
                         ),
                       ),
                       Space.y!,
-                      Row(
-                        children: kTools
-                            .map((e) => ToolTechWidget(
-                                  techName: e,
-                                ))
-                            .toList(),
+                      Column(
+                        children: [
+                          GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 4,
+                            childAspectRatio: 2,
+                            mainAxisSpacing: 10,
+                            crossAxisSpacing: 10
+                          ),
+                          shrinkWrap: true,
+                          
+                          children: AboutUtils.techTools.asMap().entries.map((e) =>  SizedBox(
+                            height: 60,
+                            child: Card(
+                                       child: Center(
+                                         child: ListTile(
+                                         leading: Image.asset(AboutUtils.techToolsIcons[e.key]),
+                                         title: Text(e.value),
+                                          ),
+                                       ),
+                              ),
+                          ),
+                          ).toList(),
+                          ),
+                        ],
                       ),
                       Space.y!,
                       Divider(

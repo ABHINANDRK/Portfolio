@@ -33,8 +33,9 @@ class HomeDesktop extends StatelessWidget {
                 child: Image.asset(
                   StaticUtils.blackWhitePhoto,
                   height: size.width < 1200
-                      ? size.height * 0.8
-                      : size.height * 0.85,
+                      ? size.height * .05
+                      : size.height * 0.95,
+                  width: size.width * 0.65,
                 ),
               ),
             ),
@@ -103,7 +104,7 @@ class HomeDesktop extends StatelessWidget {
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' UI/UX Enthusiast',
+                            ' iOS Developer',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),

@@ -48,17 +48,17 @@ class _NavbarDesktop extends StatelessWidget {
             ),
           ),
           Space.x!,
-          Switch(
-            inactiveTrackColor: Colors.grey,
-            value: appBloc.isDark,
-            onChanged: (value) {
-              // appBloc.setTheme(
-              //   !value ? ThemeMode.light : ThemeMode.dark,
-              // );
-            },
-            activeColor: AppTheme.c!.primary!,
-          ),
-          Space.x!,
+          // Switch(
+          //   inactiveTrackColor: Colors.grey,
+          //   value: appBloc.isDark,
+          //   onChanged: (value) {
+          //     // appBloc.setTheme(
+          //     //   !value ? ThemeMode.light : ThemeMode.dark,
+          //     // );
+          //   },
+          //   activeColor: AppTheme.c!.primary!,
+          // ),
+       //   Space.x!,
         ],
       ),
     );

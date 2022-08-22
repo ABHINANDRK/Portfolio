@@ -7,7 +7,6 @@ import 'package:portfolio/core/utils/app_typography.dart';
 import 'package:portfolio/core/utils/constants.dart';
 import 'package:portfolio/core/utils/space.dart';
 import 'package:portfolio/core/utils/utils.dart';
-import 'package:portfolio/core/utils/work_utils.dart';
 import 'package:portfolio/widgets/about_me_data.dart';
 import 'package:portfolio/widgets/community_button.dart';
 import 'package:portfolio/widgets/custom_text_heading.dart';
@@ -80,12 +79,35 @@ class AboutMobile extends StatelessWidget {
             ),
           ),
           Space.y!,
-          Wrap(
-            children:  kTools
-                .map(
-                  (e) => ToolTechWidget(techName: e),
-                )
-                .toList(),
+          Column(
+            children: [
+              GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    childAspectRatio: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10),
+                shrinkWrap: true,
+                children: AboutUtils.techTools
+                    .asMap()
+                    .entries
+                    .map(
+                      (e) => SizedBox(
+                        height: 40,
+                        child: Card(
+                          child: Center(
+                            child: ListTile(
+                              leading:
+                                  Image.asset(AboutUtils.techToolsIcons[e.key]),
+                              title: Text(e.value),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                    .toList(),
+              ),
+            ],
           ),
           Space.y!,
           Divider(

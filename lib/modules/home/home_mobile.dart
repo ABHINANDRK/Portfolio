@@ -28,12 +28,13 @@ class _HomeMobileState extends State<HomeMobile> {
         children: [
           Positioned(
             bottom: 0.0,
-            right: -AppDimensions.normalize(25),
+            right: -AppDimensions.normalize(0),
             child: Opacity(
               opacity: 0.9,
               child: Image.asset(
                 StaticUtils.blackWhitePhoto,
-                height: AppDimensions.normalize(150),
+                height: AppDimensions.normalize(250),
+                width: AppDimensions.normalize(150),
               ),
             ),
           ),
