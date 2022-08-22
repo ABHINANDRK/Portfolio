@@ -83,7 +83,7 @@ class AboutMobile extends StatelessWidget {
             children: [
               GridView(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                     childAspectRatio: 2,
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10),
@@ -93,12 +93,12 @@ class AboutMobile extends StatelessWidget {
                     .entries
                     .map(
                       (e) => SizedBox(
-                        height: 40,
+                        height: AppDimensions.normalize(40),
                         child: Card(
                           child: Center(
                             child: ListTile(
                               leading:
-                                  Image.asset(AboutUtils.techToolsIcons[e.key]),
+                                  Image.asset(AboutUtils.techToolsIcons[e.key],height: 35,width: 35,),
                               title: Text(e.value),
                             ),
                           ),
