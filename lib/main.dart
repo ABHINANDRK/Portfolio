@@ -14,10 +14,13 @@ import 'package:portfolio/configs/core_theme.dart' as theme;
 void main() async {
   setPathUrlStrategy();
   Initializer.instance.init(() {
-    BlocOverrides.runZoned(
-      () => runApp(Main()),
-      blocObserver: AppBlocObserver(),
+
+    Bloc.observer = AppBlocObserver();
+
+    runApp(
+        const Main()
     );
+
   });
 }
 
@@ -33,6 +36,7 @@ class Main extends StatelessWidget {
     ], child: MaterialApp(
         title: "Demo",
         theme: theme.themeLight,
+
         darkTheme: theme.themeDark,
         debugShowCheckedModeBanner: false,
         initialRoute: "/",

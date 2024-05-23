@@ -33,10 +33,10 @@ class SocialLinks extends StatelessWidget {
                 splashRadius: AppDimensions.normalize(12),
                 icon: Image.network(
                   e.value,
-                  color: appBloc.isDark ? Colors.white : Colors.black,
+                  color: appBloc.isDark ? Colors.black : Colors.white,
                   height: Responsive.isMobile(context)
                       ? AppDimensions.normalize(10)
-                      : null,
+                      : AppDimensions.normalize(15),
                 ),
                 iconSize: Responsive.isMobile(context)
                     ? AppDimensions.normalize(10)
