@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_typography.dart';
 
@@ -17,9 +15,7 @@ class NavBarLogo extends StatelessWidget {
         ),
         Text(
           "Abhinand",
-          style: AppText.b1b!.copyWith(
-            fontFamily: 'Agustina',
-          ),
+          style: AppText.b1b!.copyWith(fontFamily: 'Agustina'),
         ),
         Text(
           MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",

@@ -7,7 +7,8 @@ import 'package:portfolio/widgets/footer.dart';
 class StaticUtils {
   static const String hi = 'assets/hi.gif';
 
-  static const String resume = "https://drive.google.com/file/d/1Xxn6vpNxoz8v-1rfxcXcw_ExOErhhNTC/view?usp=sharing";
+  static const String resume =
+      "https://drive.google.com/file/d/1KFuYiIhs3doS8ooyEo4EqnhAcj49J57O/view?usp=sharing";
 
   // photos
   static const String mobilePhoto = 'assets/photos/mobile.png';
@@ -15,14 +16,13 @@ class StaticUtils {
   static const String blackWhitePhoto = 'assets/photos/black-white.png';
 
   // work
-    // work 
+  // work
   static const String dsc = 'assets/work/dsc.png';
   static const String sastaticket = 'assets/work/st.png';
   static const String university = 'assets/work/cui.png';
   static const String fullterIsb = 'assets/work/flutterIsl.png';
 
   // services
-
 
   static const List<String> socialIconURL = [
     "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
@@ -47,12 +47,12 @@ class StaticUtils {
 
 class BodyUtils {
   static const List<Widget> views = [
-     HomePage(),
-     About(),
-     Contact(),
+    HomePage(),
+    About(),
+    Contact(),
     // Services(),
     // Portfolio(),
-     
-     Footer()
+
+    Footer()
   ];
 }

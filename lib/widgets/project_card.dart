@@ -134,10 +134,8 @@ class ProjectCardState extends State<ProjectCard> {
                 SizedBox(
                   height: height * 0.01,
                 ),
-                Text(
-                  widget.projectDescription,
-                  textAlign: TextAlign.center,
-                ),
+                Text(widget.projectDescription,
+                    textAlign: TextAlign.center, style: AppText.l1),
                 SizedBox(
                   height: height * 0.01,
                 ),

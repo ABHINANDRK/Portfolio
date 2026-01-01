@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:portfolio/configs/app_dimensions.dart';
 import 'package:portfolio/core/utils/about_utils.dart';
 import 'package:portfolio/core/utils/app_theme.dart';
@@ -10,7 +9,6 @@ import 'package:portfolio/core/utils/work_utils.dart';
 import 'package:portfolio/widgets/about_me_data.dart';
 import 'package:portfolio/widgets/community_button.dart';
 import 'package:portfolio/widgets/custom_text_heading.dart';
-
 import 'package:universal_html/html.dart' as html;
 
 class AboutDesktop extends StatelessWidget {
@@ -86,26 +84,32 @@ class AboutDesktop extends StatelessWidget {
                       Space.y!,
                       Column(
                         children: [
-                          GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 4,
-                            childAspectRatio: 2,
-                            mainAxisSpacing: 10,
-                            crossAxisSpacing: 10
-                          ),
-                          shrinkWrap: true,
-                          
-                          children: AboutUtils.techTools.asMap().entries.map((e) =>  SizedBox(
-                            height: 60,
-                            child: Card(
-                                       child: Center(
-                                         child: ListTile(
-                                         leading: Image.asset(AboutUtils.techToolsIcons[e.key]),
-                                         title: Text(e.value),
-                                          ),
-                                       ),
-                              ),
-                          ),
-                          ).toList(),
+                          GridView(
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 4,
+                                    childAspectRatio: 2,
+                                    mainAxisSpacing: 10,
+                                    crossAxisSpacing: 10),
+                            shrinkWrap: true,
+                            children: AboutUtils.techTools
+                                .asMap()
+                                .entries
+                                .map(
+                                  (e) => SizedBox(
+                                    height: 60,
+                                    child: Card(
+                                      child: Center(
+                                        child: ListTile(
+                                          leading: Image.asset(
+                                              AboutUtils.techToolsIcons[e.key]),
+                                          title: Text(e.value),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                                .toList(),
                           ),
                         ],
                       ),
@@ -125,7 +129,7 @@ class AboutDesktop extends StatelessWidget {
                               ),
                               AboutMeData(
                                 data: "Age",
-                                information: "26",
+                                information: "28",
                               ),
                             ],
                           ),
@@ -160,7 +164,6 @@ class AboutDesktop extends StatelessWidget {
                             ),
                           ),
                           Space.x1!,
-                       
                           ...WorkUtils.logos.asMap().entries.map(
                                 (e) => Expanded(
                                   child: CommunityIconBtn(

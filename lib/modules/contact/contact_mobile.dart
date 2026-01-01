@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart' as carousel;
 import 'package:flutter/material.dart';
 import 'package:portfolio/configs/app_dimensions.dart';
 import 'package:portfolio/core/utils/contact_utils.dart';
@@ -18,7 +18,7 @@ class ContactMobileTab extends StatelessWidget {
         const CustomSectionSubHeading(
           text: "Let's build something together :)\n\n",
         ),
-        CarouselSlider.builder(
+        carousel.CarouselSlider.builder(
           itemCount: 3,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -28,7 +28,7 @@ class ContactMobileTab extends StatelessWidget {
               projectDescription: ContactUtils.details[i],
             ),
           ),
-          options: CarouselOptions(
+          options: carousel.CarouselOptions(
             height: AppDimensions.normalize(90),
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
